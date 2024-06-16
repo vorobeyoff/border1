@@ -1,0 +1,268 @@
+/* Общие стили */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background-color: #4b79a1;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 0;
+  text-align: center; /* Центруем заголовки разделов */
+}
+
+/* Стили для главной страницы */
+#hero {
+  display: flex;
+  flex-direction: column; /*  Делаем "Герой" столбцом */
+  align-items: center;
+  gap: 20px;
+}
+
+#hero .hero-content {
+  text-align: center; /*  Центрируем текст в "Герое" */
+  width: 80%; /*  Устанавливаем ширину текста "Героя" */
+}
+
+#hero .hero-image {
+  text-align: center;
+}
+
+#hero .hero-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Стили для страницы "О компании" */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 20px; /* Добавляем отступ слева для текста */
+  text-align: left; /* Выравниваем текст влево */
+}
+
+.about-content p {
+  line-height: 1.6;
+}
+
+/* Стили для страницы "Наши услуги" */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.service {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.service i {
+  font-size: 2em;
+  color: #4b79a1;
+  margin-bottom: 10px;
+}
+
+.service h3 {
+  margin-bottom: 10px;
+}
+
+/* Стили для страницы "Контакты" */
+#contact-info .contact-content {
+  display: flex;
+  flex-direction: column; /*  Делаем контактную информацию столбцом */
+  align-items: center;
+  gap: 20px;
+}
+
+#contact-info .info-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 300px;
+}
+
+#contact-info .info-item {
+  text-align: center;
+}
+
+#map {
+  width: 100%; /* Карта занимает всю ширину */
+  margin: 0 auto; /* Выравниваем карту по центру */
+}
+
+/* Стили для страницы "Продукция" */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: auto; /*  Изменено, чтобы картинка подстраивалась по высоте */
+  margin-bottom: 10px;
+}
+
+.product h3 {
+  margin-bottom: 10px;
+}
+
+.product p {
+  line-height: 1.4;
+  padding-left: 20px; /* Добавляем отступ слева для текста */
+  text-align: left; /* Выравниваем текст влево */
+}
+
+/* Стили для кнопок */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #4b79a1;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #283e51;
+}
+
+/* Стили для футера */
+footer {
+  position: fixed; /*  Прикрепляем футер к нижней части */
+  bottom: 0; /*  Располагаем футер внизу */
+  left: 0; /*  Расширяем футер по всей ширине */
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  z-index: 10; /*  Ставим футер поверх контента */
+}
+
+/* Медиазапросы для адаптивного дизайна */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  #hero {
+    flex-direction: column;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  #contact-info .contact-content {
+    flex-direction: column;
+  }
+
+  #map {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 20px;
+  }
+
+  nav ul li a {
+    padding: 8px 10px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+
+  .product img {
+    height: 100px;
+  }
+}
